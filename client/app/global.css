@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --default-font-size: 0.875rem; /* Tailwind's text-sm */
+  --app-padding: 12px;
+  --layout-aside-width: 100%;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --app-padding: 1rem;
+    --default-font-size: 1rem; /* Tailwind's text-base */
+    --layout-aside-width: 320px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --layout-aside-width: 380px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline-color: black;
+  outline-offset: 2px;
+  outline-width: 2px;
+}
+html,
+body {
+  background-color: #e8f2ff; /* Tailwind's primary-50 (sky-50) */
+  color: #0c4a6e; /* Tailwind's primary-900 (sky-900) */
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App layout */
+
+body {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  flex: 1;
+  min-height: 100dvh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100dvh;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 0 var(--app-padding) var(--app-padding) var(--app-padding);
+}
+
+/* Animation keyframes */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Utilities */
+
+.borderClip {
+  background-clip: padding-box, border-box;
+}
+
+samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  display: inline;
+  font-size: 0.75rem; /* Approximate Tailwind's text-xs */
+  padding: 0 0.4em;
+  line-height: 1;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0); /* fallback for color-mix */
+  letter-spacing: 0.05rem;
+}
+
+sub {
+  vertical-align: baseline;
+  margin-left: 2px;
+  font-size: 65%;
+  bottom: 0 !important;
+  color: #38bdf8; /* Approximate Tailwind's primary-500 (sky-500) */
+}
+
+/* Dialog (modal) */
+
+dialog {
+  background: transparent;
+  box-shadow: 0 10px 15px -3px rgba(91, 201, 240, 0.1), 0 4px 6px -4px rgba(248, 248, 248, 0.711); /* Example for shadow-lg */
+  border-radius: 50rem; /* Example for rounded-3xl */
+  animation: appear 0.3s ease-out;
+}
+
+dialog::backdrop {
+  background-color: rgba(149, 220, 238, 0.727);
+  backdrop-filter: blur(5px);
+}
+
+#tray {
+  overflow: hidden;
+  height: 100dvh;
+}
