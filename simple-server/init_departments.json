@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Cardiology",
+    "operating_hours": [
+      { "day_of_week": "Monday", "start_time": "09:00", "end_time": "17:00" },
+      { "day_of_week": "Wednesday", "start_time": "09:00", "end_time": "17:00" }
+    ]
+  },
+  {
+    "name": "Radiology",
+    "operating_hours": [
+      { "day_of_week": "Tuesday", "start_time": "08:00", "end_time": "16:00" },
+      { "day_of_week": "Thursday", "start_time": "10:00", "end_time": "18:00" }
+    ]
+  },
+  {
+    "name": "Oncology",
+    "operating_hours": [
+      { "day_of_week": "Monday", "start_time": "09:00", "end_time": "17:00" },
+      { "day_of_week": "Friday", "start_time": "09:00", "end_time": "15:00" }
+    ]
+  },
+  {
+    "name": "Dermatology",
+    "operating_hours": [
+      { "day_of_week": "Wednesday", "start_time": "10:00", "end_time": "16:00" },
+      { "day_of_week": "Friday", "start_time": "11:00", "end_time": "17:00" }
+    ]
+  }
+]
