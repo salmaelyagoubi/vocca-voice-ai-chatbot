@@ -1,0 +1,14 @@
+[
+  {
+    "department_id": { "$oid": "6865a62e7450c5f9402273a4" },
+    "user_id": 101,
+    "booking_time": { "$date": "2025-07-03T10:30:00Z" },
+    "status": "confirmed"
+  },
+  {
+    "department_id": { "$oid": "6866fd2a0cabbaf41de7bcd6" },
+    "user_id": 102,
+    "booking_time": { "$date": "2025-07-04T14:00:00Z" },
+    "status": "confirmed"
+  }
+]
